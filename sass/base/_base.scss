@@ -1,0 +1,33 @@
+@font-face {
+    font-family: "CustomFont";
+    src: url(../../Arvo/Arvo-Bold.ttf);
+    src: url(../../Arvo/Arvo-BoldItalic.ttf);
+    src: url(../../Arvo/Arvo-Italic.ttf);
+    src: url(../../Arvo/Arvo-Regular.ttf);
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: inherit;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "CustomFont", sans-serif;
+    font-size: 1.6rem;
+}
+
+.container {
+    background-image: url(../../img/hero.png);
+    background-position: center;
+    background-size: cover;
+    height: 85vh;
+}

@@ -1,0 +1,84 @@
+.header {
+
+    &_content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &_logo {
+        width: 75%;
+        height: 75%;
+    }
+
+    &_nav {
+        display: flex;
+        gap: 1rem;
+        padding-right: 5rem;
+        align-items: center;
+
+        &-link:link,
+        &-link:visited {
+            color: $color-white;
+            font-weight: 500;
+            font-size: 1.6rem;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: all .2s;
+            padding: 1rem;
+            border: 1px solid transparent;
+        }
+
+        &-link:hover,
+        &-link:active {
+            color: $color-primary;
+            transform: translateY(-1px);
+            border: 1px solid $color-white;
+        }
+
+        &-line {
+            transform: rotateX(180deg);
+            color: $color-white;
+            font-size: 3rem;
+        }
+    }
+
+    &_dropdown {
+        position: relative;
+        display: inline-block;
+        transition: all .2s;
+
+        &-content {
+            display: none;
+            background-color: $color-white;
+            box-shadow: 0 0 .8rem rgba($color: #000000, $alpha: 0.3);
+            position: absolute;
+            width: max-content;
+            transition: all .2s;
+
+            a:link,
+            a:visited {
+                padding: 1.2rem 1.4rem;
+                color: #afafaf;
+                font-weight: 500;
+                font-size: 1.4rem;
+                text-decoration: none;
+                text-transform: uppercase;
+                transition: all .2s;
+                display: block;
+            }
+
+            a:hover,
+            a:active {
+                color: $color-primary;
+                background-color: #e9e9e9;
+            }
+
+        }
+
+        &:hover &-content {
+            display: block;
+            z-index: 1;
+        }
+    }
+}

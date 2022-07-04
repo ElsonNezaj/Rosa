@@ -1,0 +1,61 @@
+.description {
+    background-color: $color-white;
+    padding: 10rem 0;
+
+    &_content {
+        width: 75%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    &_logo {
+        width: 8rem;
+        height: 100%;
+        margin-bottom: 1.5rem;
+    }
+
+    &_title {
+        color: $color-primary;
+        font-weight: lighter;
+        font-size: 3.6rem;
+        margin-bottom: 3rem;
+    }
+
+    &_text {
+        padding: 0 15rem;
+        color: #656565;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+
+        span {
+            color: rgb(3, 65, 142);
+        }
+    }
+
+    &_list {
+        list-style: none;
+        color: #656565;
+        text-transform: uppercase;
+        margin-bottom: 4rem;
+    }
+
+    &_li {
+        margin-bottom: 0.3rem;
+    }
+
+    &_btn {
+        background-color: #fff;
+        border: 2px solid $color-primary;
+        padding: 2rem 10rem;
+        font-size: 2.2rem;
+        font-family: "CustomFont", sans-serif;
+        color: $color-primary;
+        cursor: pointer;
+        transition: all .3s;
+
+        &:hover {
+            background-color: $color-primary;
+            color: #fff;
+        }
+    }
+}

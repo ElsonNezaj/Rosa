@@ -1,0 +1,58 @@
+.features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    .feature {
+        width: 100%;
+        height: 47.3rem;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+
+
+        &--1 {
+            background-image: url(../../img/feature1.png);
+            background-size: cover;
+            align-items: stretch;
+            background-position: bottom;
+        }
+
+        &--2 {
+            background-image: url(../../img/feature2.png);
+            background-size: cover;
+            align-items: stretch;
+        }
+
+        &--3 {
+            background-image: url(../../img/feature3.png);
+            background-size: cover;
+            align-items: stretch;
+        }
+
+        &_text {
+            grid-column: 2/4;
+            grid-row: 2/4;
+            background-color: rgba($color: #fff, $alpha: 0.95);
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            padding: 0 2rem;
+            letter-spacing: 0.3rem;
+            width: 100%;
+            height: auto;
+            text-align: center;
+
+            &--2 {
+                background-color: $color-primary;
+                color: $color-white;
+            }
+
+
+            h3 {
+                font-size: 2rem;
+                align-self: center;
+                justify-content: center;
+            }
+        }
+    }
+}
