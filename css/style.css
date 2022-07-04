@@ -238,3 +238,21 @@ body {
     .description_btn:hover {
       background-color: #d94d39;
       color: #fff; }
+
+.reservation {
+  padding: 10rem 0;
+  background-color: #d94d39; }
+  .reservation_content {
+    width: 75%;
+    margin: 0 auto; }
+  .reservation_form {
+    display: grid;
+    grid-template-columns: repeat(6, 15%);
+    grid-template-rows: repeat(4, 20%);
+    justify-content: center;
+    gap: 3rem; }
+  .reservation_div {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    border-bottom: 1px solid #fff; }

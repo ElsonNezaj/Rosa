@@ -1,0 +1,25 @@
+.reservation {
+    padding: 10rem 0;
+    background-color: $color-primary;
+
+    &_content {
+        width: 75%;
+        margin: 0 auto;
+    }
+
+    &_form {
+        display: grid;
+        grid-template-columns: repeat(6, 15%);
+        grid-template-rows: repeat(4, 20%);
+        justify-content: center;
+        gap: 3rem;
+    }
+
+    &_div {
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+        border-bottom: 1px solid $color-white;
+    }
+
+}

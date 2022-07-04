@@ -37,7 +37,7 @@
                     <a class="header_nav-link" href="#">See</a>
                     <a class="header_nav-link" href="#">To Do</a>
                     <div class="header_nav-line">&Backslash;</div>
-                    <a class=" header_nav-link" href="#">Ask For Reservation</a>
+                    <a class=" header_nav-link" href="#reser">Ask For Reservation</a>
                 </nav>
             </div>
         </header>
@@ -99,6 +99,55 @@
             </ul>
 
             <button class="description_btn">Come in and relax</button>
+        </div>
+    </section>
+
+    <!--Reservation-->
+    <section class="reservation" id="reser">
+        <div class="reservation_content">
+            <h1 class="reservation_title">ASK FOR RESERVATION</h1>
+            <p class="reservation_text">And feel free to drop us a line about everything you need to know</p>
+
+            <form class="reservation_form">
+                <div class="reservation_div">
+                    <label for="name" class="reservation_label">Name:</label>
+                    <input type="text" id="name" class="reservation_input" placeholder="John Doe" required>
+                </div>
+                <div class="reservation_div">
+                    <label for="email" class="reservation_label">Email:</label>
+                    <input type="email" id="email" class="reservation_input" placeholder="john@email.com" required>
+                </div>
+                <div class="reservation_div">
+                    <label for="date" class="reservation_label">From:</label>
+                    <input type="date" id="date" class="reservation_input" required>
+                </div>
+                <div class="reservation_div">
+                    <label for="to" class="reservation_label">To:</label>
+                    <input type="date" id="to" class="reservation_input" required>
+                </div>
+                <div class="reservation_div">
+                    <label for="adults" class="reservation_label">Adults:</label>
+                    <select name="adults" id="adults" size="4" class="reservation_select">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                    </select>
+                </div>
+                <div class="reservation_div">
+                    <label for="kids" class="reservation_label">Children:</label>
+                    <select name="kids" id="kids" size="4" reservation_select>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                    </select>
+                </div>
+                <div class="reservation_div">
+                    <label for="kids" class="reservation_label">Ask everything:</label>
+                    <textarea class="reservation_area" placeholder="Your Message"></textarea>
+                </div>
+            </form>
         </div>
     </section>
 
