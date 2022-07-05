@@ -7,19 +7,94 @@
         margin: 0 auto;
     }
 
+    &_title {
+        color: $color-white;
+        font-weight: lighter;
+        font-size: 3.6rem;
+        letter-spacing: .5rem;
+        margin-bottom: 1.5rem;
+        text-align: center;
+    }
+
+    &_text {
+        color: $color-white;
+        font-weight: lighter;
+        font-size: 2rem;
+        margin-bottom: 2.5rem;
+        text-align: center;
+    }
+
     &_form {
+        margin-top: 3rem;
         display: grid;
-        grid-template-columns: repeat(6, 15%);
-        grid-template-rows: repeat(4, 20%);
-        justify-content: center;
+        grid-template-columns: 30% 30% 20% 20%;
+        grid-template-rows: repeat(4, 1fr);
+        align-items: center;
         gap: 3rem;
     }
 
-    &_div {
-        display: flex;
-        align-items: center;
-        gap: .5rem;
-        border-bottom: 1px solid $color-white;
+    &_label {
+        color: $color-white;
     }
 
+    &_name {
+        border-bottom: 1px solid $color-white;
+
+        input {
+            border: none;
+            background-color: transparent;
+            font-size: 1.6rem;
+            font-family: 'CustomFont', sans-serif;
+            color: $color-white;
+            border: 2px solid transparent;
+            padding: .5rem 1.5rem;
+            transition: all .3s;
+
+            &::placeholder {
+                color: rgb(239, 239, 239);
+            }
+
+            &:focus {
+                outline: none;
+                border: 2px solid $color-secondary;
+                padding: .5rem 1.5rem;
+            }
+        }
+    }
+
+    &_email {
+        border-bottom: 1px solid $color-white;
+
+        input {
+            border: none;
+            background-color: transparent;
+            font-size: 1.6rem;
+            font-family: 'CustomFont', sans-serif;
+            color: $color-white;
+            border: 2px solid transparent;
+            padding: .5rem 1.5rem;
+            transition: all .3s;
+
+            &::placeholder {
+                color: rgb(239, 239, 239);
+            }
+
+            &:focus {
+                outline: none;
+                border: 2px solid $color-secondary;
+                padding: .5rem 1.5rem;
+                color: $color-white;
+            }
+
+            &:focus:invalid {
+                color: black;
+            }
+        }
+    }
+
+    &_date {
+        border-bottom: 1px solid $color-white;
+        padding-top: 1.5rem;
+        position: relative;
+    }
 }
