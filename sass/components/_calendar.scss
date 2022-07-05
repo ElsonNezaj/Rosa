@@ -1,17 +1,20 @@
 .calendar {
-    width: 100%;
+    width: 21rem;
     height: max-content;
     margin: 0;
     position: absolute;
-    top: -16rem;
+    top: -18rem;
     left: 0;
-    display: absolute;
+    display: none;
+    z-index: 20;
 
     &_heading {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background-color: #f4f4f4;
+        background-color: #f7f7f7;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
     }
 
     &_icon {
@@ -33,7 +36,9 @@
     &_day {
         font-size: 1rem;
         justify-self: center;
+
     }
+
 }
 
 .calendar_dates {
@@ -43,9 +48,17 @@
     justify-items: center;
     align-items: center;
     font-size: 1.4rem;
-    background-color: #f4f4f4;
+    background-color: white;
 }
 
 .calendar_date {
-    padding-top: 1rem;
+    margin-top: 1rem;
+    width: 100%;
+    height: auto;
+    text-align: center;
+
+
+    &:hover {
+        background-color: $color-primary;
+    }
 }
