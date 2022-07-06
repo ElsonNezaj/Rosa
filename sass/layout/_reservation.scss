@@ -1,7 +1,6 @@
 .reservation {
     padding: 10rem 0;
     background-color: $color-primary;
-    height: 65vh;
 
     &_content {
         max-width: 65%;
@@ -177,7 +176,7 @@
         border-bottom: 1px solid white;
 
         &-text {
-            width: 81.5%;
+            width: 50%;
             background-color: transparent;
             border: none;
             color: $color-white;
