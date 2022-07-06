@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="css/style.css">
-
     <title>Rosa Hotel Garni</title>
 </head>
 
@@ -121,9 +120,9 @@
 
                 <div class="reservation_date">
                     <label class="reservation_label" for="from">From :</label>
-                    <input class="reservation_date-input" placeholder="mm/dd/yyyy">
+                    <input id="from" class="reservation_date-input" placeholder="mm/dd/yyyy">
 
-                    <div class="calendar">
+                    <div class="calendar" id="calendar">
                         <div class="calendar_heading">
                             <ion-icon name="chevron-back-outline" class="calendar_icon"></ion-icon>
                             <h2 class="calendar_header">MAY</h2>
@@ -177,7 +176,7 @@
 
                 <div class="reservation_date">
                     <label class="reservation_label" for="to">To :</label>
-                    <input class="reservation_date-input" placeholder="mm/dd/yyyy">
+                    <input id="to" class="reservation_date-input" placeholder="mm/dd/yyyy">
 
                     <div class="calendar">
                         <div class="calendar_heading">
@@ -230,6 +229,71 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="reservation_select">
+                    <label class="reservation_label">Adults:&nbsp; 2</label>
+                    <button class="reservation_select-btn">
+                        <ion-icon class="selecticon" name="chevron-down-outline"></ion-icon>
+                    </button>
+
+                    <div class="reservation_number">
+                        <div class="reservation_number-div">
+                            <p class="reservation_number-nr">1</p>
+                        </div>
+                        <div class="reservation_number-div">
+                            <p class="reservation_number-nr">2</p>
+                        </div>
+                        <div class="reservation_number-div">
+                            <p class="reservation_number-nr">3</p>
+                        </div>
+                        <div class="reservation_number-div">
+                            <p class="reservation_number-nr">4</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="reservation_select">
+                    <label class="reservation_label">Children:&nbsp; 2</label>
+                    <button class="reservation_select-btn">
+                        <ion-icon class="selecticon" name="chevron-down-outline"></ion-icon>
+                    </button>
+
+                    <div class="reservation_number">
+                        <div class="reservation_number-div">
+                            <p class="reservation_number-nr">1</p>
+                        </div>
+                        <div class="reservation_number-div">
+                            <p class="reservation_number-nr">2</p>
+                        </div>
+                        <div class="reservation_number-div">
+                            <p class="reservation_number-nr">3</p>
+                        </div>
+                        <div class="reservation_number-div">
+                            <p class="reservation_number-nr">4</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reservation_area">
+                    <label class="reservation_label" for="area">Ask us anything: &nbsp; &nbsp;</label>
+                    <input type="text" id="area" class="reservation_area-text" placeholder="Your Message">
+                </div>
+            </form>
+
+            <a class="reservation_button">SEND YOUR REQUEST</a>
+        </div>
+    </section>
+
+    <!-- Call to Action Section-->
+    <section class="section-cta">
+        <div class="cta">
+            <h1 class="cta_heading">STAY IN TOUCH</h1>
+            <h3 class="cta_text">RECIEVE THE LATEST NEWS AND PROMOTION, STRAIGHT TO YOUR MAILBOX</h3>
+
+            <form class="cta_form">
+                <input type="email" class="cta_email" required placeholder="your@email.com">
+                <button class="cta_button">REGISTER ME NOW</button>
             </form>
         </div>
     </section>

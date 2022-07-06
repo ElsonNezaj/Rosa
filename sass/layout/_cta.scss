@@ -1,0 +1,75 @@
+.section-cta {
+    background-image: url(../../img/cta.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 15rem 0 30rem 0;
+}
+
+.cta {
+    max-width: 57%;
+    margin: 0 auto;
+
+    &_heading {
+        color: $color-white;
+        text-align: center;
+        font-size: 3.5rem;
+        font-weight: lighter;
+        letter-spacing: .5rem;
+        margin-bottom: 1rem;
+    }
+
+    &_text {
+        color: $color-white;
+        font-weight: lighter;
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 7rem;
+    }
+
+    &_form {
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    &_email {
+        font-size: 2rem;
+        width: 65%;
+        padding: 1rem 3rem;
+        transition: all .2s;
+
+        &:focus:invalid {
+            color: $color-primary;
+            cursor: black;
+        }
+
+        &:focus {
+            color: black;
+        }
+    }
+
+    &_button {
+        width: 35%;
+        font-size: 1.6rem;
+        padding: 1.3rem 3rem;
+        border: 2px solid $color-white;
+        background-color: transparent;
+        color: $color-white;
+        transition: all .1s;
+
+        &:hover {
+            background-color: $color-white;
+            color: black;
+            transform: translateY(-1rem);
+            box-shadow: 0 2rem 4rem rgba($color: #000000, $alpha: 0.4);
+        }
+
+        &:active {
+            background-color: $color-primary;
+            color: $color-white;
+            transform: translateY(0);
+            border: 2px solid $color-primary;
+            box-shadow: 0 2rem 10rem rgba($color: #000000, $alpha: 0.4);
+        }
+    }
+}

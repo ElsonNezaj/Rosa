@@ -1,9 +1,10 @@
 .reservation {
     padding: 10rem 0;
     background-color: $color-primary;
+    height: 65vh;
 
     &_content {
-        max-width: 75%;
+        max-width: 65%;
         margin: 0 auto;
     }
 
@@ -49,8 +50,8 @@
             font-size: 1.6rem;
             font-family: 'CustomFont', sans-serif;
             color: $color-white;
-            border: 2px solid transparent;
-            padding: .5rem 1.5rem;
+            border-top: 2px solid transparent;
+            padding: 0 1.5rem;
             transition: all .3s;
 
             &::placeholder {
@@ -60,7 +61,7 @@
             &:focus {
                 outline: none;
                 border-top: 2px solid $color-white;
-                padding: .5rem 1.5rem .5rem 0;
+                padding: .5rem 1.5rem 0rem 0;
             }
         }
     }
@@ -77,7 +78,7 @@
             font-family: 'CustomFont', sans-serif;
             color: $color-white;
             border: 2px solid transparent;
-            padding: .5rem 1.5rem;
+            padding: 0 1.5rem;
             transition: all .3s;
 
             &::placeholder {
@@ -87,7 +88,7 @@
             &:focus {
                 outline: none;
                 border-top: 2px solid $color-white;
-                padding: .5rem 1.5rem .5rem 0;
+                padding: .5rem 1.5rem 0rem 0;
                 color: $color-white;
             }
 
@@ -100,11 +101,7 @@
     &_date {
         position: relative;
         border-bottom: 1px solid white;
-        padding-top: 1.5rem;
-
-        &:hover .calendar {
-            display: block;
-        }
+        padding-top: .5rem;
 
         &-input {
             width: 7.5rem;
@@ -115,139 +112,112 @@
                 color: white;
                 font-size: 1.4rem;
             }
+
+            &:focus+.calendar {
+                display: block;
+                z-index: 1000;
+            }
+
         }
     }
 
-    &_adult {
-        width: 20rem;
+    &_select {
         display: flex;
+        justify-content: space-between;
+        align-items: center;
         position: relative;
-        justify-content: start;
-        gap: 2rem;
-        border-bottom: 1px solid $color-white;
+        border-bottom: 1px solid white;
+
+        &-btn {
+            display: inline-block;
+            padding: 0.2rem 0.4rem;
+            background-color: transparent;
+            border: none;
+
+            .selecticon {
+                color: white;
+                font-size: 1.6rem;
+            }
+
+            &:focus+.reservation_number {
+                display: block;
+            }
+        }
     }
 
-    &_icon {
-        color: $color-white;
-    }
-
-    &_ad {
-        width: 5rem;
-        background-color: #f7f7ff;
+    &_number {
         position: absolute;
         display: none;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        top: 0%;
-        left: 80%;
-        transform: translateY(-15.6rem);
-        z-index: 30;
-    }
-
-    &_adu {
+        bottom: 0%;
+        left: 84%;
+        padding: 1rem 1rem 0 1rem;
+        background-color: #f7f7f7;
         text-align: center;
-        width: 100%;
-        height: 100%;
-        background-color: #f7f7ff;
-        padding-bottom: 1rem;
-        padding-top: .5rem;
 
-        &:hover {
-            background-color: #eee;
+        &-div {
+            &:not(:last-child) {
+                padding-bottom: 1rem;
+            }
         }
 
-        &:hover .reservation_adi {
-            color: $color-primary;
-        }
-    }
+        &-nr {
+            color: rgb(160, 160, 160);
+            border-bottom: 1px solid #ddd;
 
-    &_adi {
-        justify-self: center;
-        text-decoration: none;
-        margin-top: .5rem;
-        margin-bottom: .5rem;
-        display: block;
-        color: $color-secondary;
-    }
-
-    &_kids {
-        width: 20rem;
-        display: flex;
-        position: relative;
-        justify-content: start;
-        gap: 2rem;
-        border-bottom: 1px solid $color-white;
-    }
-
-    &_chi {
-        width: 5rem;
-        background-color: #f7f7ff;
-        position: absolute;
-        display: none;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        top: 0;
-        transform: translateY(-15.6rem);
-        left: 75%;
-        z-index: 30;
-    }
-
-    &_chil {
-        text-align: center;
-        width: 100%;
-        height: 100%;
-        background-color: #f7f7ff;
-        padding-bottom: 1rem;
-        padding-top: .5rem;
-
-        &:hover {
-            background-color: #eee;
-        }
-
-        &:hover .reservation_child {
-            color: $color-primary;
+            &:hover {
+                cursor: pointer;
+                color: $color-primary;
+                border-bottom: 1px solid $color-primary;
+            }
         }
     }
 
-    &_child {
-        justify-self: center;
-        text-decoration: none;
-        margin-top: .5rem;
-        margin-bottom: .5rem;
-        display: block;
-        color: $color-secondary;
-    }
-}
+    &_area {
+        grid-column: 3/7;
+        border-bottom: 1px solid white;
 
-.select {
-    display: flex;
-    align-items: center;
-    gap: 7rem;
-
-    input {
-        width: 5rem;
-        border: none;
-        background-color: transparent;
-        padding: 0 1rem 0 0.5rem;
-
-        &:focus ::placeholder {
-            display: none;
-        }
-
-        &::placeholder {
+        &-text {
+            width: 81.5%;
+            background-color: transparent;
+            border: none;
             color: $color-white;
+            font-size: 1.6rem;
+            font-weight: 600;
+            transition: all .2s;
 
-
+            &::placeholder {
+                color: white;
+                font-family: 'CustomFont', sans-serif;
+                font-weight: lighter;
+            }
         }
     }
-}
 
-.select:hover .reservation_ad {
-    display: block;
-}
+    &_button {
+        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 6rem;
+        background-color: $color-white;
+        color: $color-primary;
+        font-size: 1.8rem;
+        cursor: pointer;
+        transition: all .3s;
 
-.select:hover .reservation_chi {
-    display: block;
+        &:hover {
+            background-color: transparent;
+            border: 3px solid $color-white;
+            color: $color-white;
+            transform: translateY(-1rem);
+            box-shadow: 0 2rem 4rem rgba($color: #000000, $alpha: 0.2);
+        }
+
+        &:active {
+            background-color: transparent;
+            transform: translateY(-.5rem);
+            box-shadow: 0 2rem 10rem rgba($color: #000000, $alpha: 0.2);
+        }
+    }
 }
