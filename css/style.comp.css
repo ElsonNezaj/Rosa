@@ -28,6 +28,9 @@ html {
   font-size: 62.5%;
   box-sizing: inherit;
   scroll-behavior: smooth; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 50%; } }
 
 body {
   font-family: "CustomFont", sans-serif;
@@ -54,11 +57,28 @@ body {
   width: 75%;
   height: 75%; }
 
+.header_items {
+  display: flex;
+  padding-right: 5rem; }
+
 .header_nav {
   display: flex;
   gap: 1rem;
-  padding-right: 5rem;
   align-items: center; }
+  @media only screen and (max-width: 75em) {
+    .header_nav {
+      background-color: #d94d39;
+      position: absolute;
+      height: 100vh;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 30%;
+      position: fixed;
+      gap: 0rem; } }
   .header_nav-link:link, .header_nav-link:visited {
     color: #fff;
     font-weight: 500;
@@ -68,10 +88,18 @@ body {
     transition: all .2s;
     padding: 1rem;
     border: 1px solid transparent; }
+    @media only screen and (max-width: 75em) {
+      .header_nav-link:link, .header_nav-link:visited {
+        border: 1px solid white;
+        width: 100%;
+        text-align: center; } }
   .header_nav-link:hover, .header_nav-link:active {
     color: #d94d39;
     transform: translateY(-1px);
     border: 1px solid #fff; }
+    @media only screen and (max-width: 75em) {
+      .header_nav-link:hover, .header_nav-link:active {
+        transform: translateY(0); } }
   .header_nav-line {
     transform: rotateX(180deg);
     color: #fff;
@@ -81,6 +109,25 @@ body {
   position: relative;
   display: inline-block;
   transition: all .2s; }
+  @media only screen and (max-width: 75em) {
+    .header_dropdown {
+      margin-bottom: 1rem;
+      width: 100%;
+      text-align: center; } }
+  .header_dropdown-b {
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.6rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all .2s;
+    padding: 1rem;
+    text-align: center; }
+    @media only screen and (max-width: 75em) {
+      .header_dropdown-b {
+        border: 1px solid white;
+        width: 100%;
+        text-align: center; } }
   .header_dropdown-content {
     display: none;
     background-color: #fff;
@@ -88,6 +135,12 @@ body {
     position: absolute;
     width: max-content;
     transition: all .2s; }
+    @media only screen and (max-width: 75em) {
+      .header_dropdown-content {
+        position: relative;
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid #777; } }
     .header_dropdown-content a:link,
     .header_dropdown-content a:visited {
       padding: 1.2rem 1.4rem;
@@ -98,13 +151,83 @@ body {
       text-transform: uppercase;
       transition: all .2s;
       display: block; }
+      @media only screen and (max-width: 75em) {
+        .header_dropdown-content a:link,
+        .header_dropdown-content a:visited {
+          border-bottom: 1px solid #999; } }
     .header_dropdown-content a:hover,
     .header_dropdown-content a:active {
       color: #d94d39;
       background-color: #e9e9e9; }
+      @media only screen and (max-width: 75em) {
+        .header_dropdown-content a:hover,
+        .header_dropdown-content a:active {
+          border-bottom: 1px solid #777; } }
   .header_dropdown:hover .header_dropdown-content {
     display: block;
     z-index: 1; }
+
+.white:link,
+.white:visited {
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.6rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all .2s;
+  padding: 1rem;
+  border: 1px solid transparent; }
+
+.white:hover,
+.white:active {
+  color: #d94d39;
+  transform: translateY(-1px);
+  border: 1px solid #fff; }
+
+.menu_link:link,
+.menu_link:visited {
+  display: none;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.6rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all .2s;
+  padding: 1rem;
+  border: 1px solid transparent; }
+  .menu_link:link:hover, .menu_link:link:active,
+  .menu_link:visited:hover,
+  .menu_link:visited:active {
+    color: #d94d39;
+    transform: translateY(-1px);
+    border: 1px solid #fff; }
+  @media only screen and (max-width: 75em) {
+    .menu_link:link,
+    .menu_link:visited {
+      display: block; } }
+
+.menu_link:focus + .menu_close,
+.menu_link:focus ~ .menu {
+  display: block; }
+
+@media only screen and (max-width: 75em) {
+  .menu {
+    display: none; } }
+
+.menu_close {
+  display: none; }
+  @media only screen and (max-width: 75em) {
+    .menu_close {
+      color: #fff;
+      position: absolute;
+      top: 10%;
+      left: 23%;
+      font-size: 5rem;
+      z-index: 1001;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      display: none; } }
 
 .section-hero {
   padding-top: 5rem;
@@ -113,6 +236,9 @@ body {
   grid-template-rows: repeat(3, 1fr);
   text-align: center;
   position: relative; }
+  @media only screen and (max-width: 59.38em) {
+    .section-hero_nav {
+      display: none; } }
   .section-hero_nav-btn {
     background-color: rgba(0, 0, 0, 0.2);
     border: none;
@@ -133,7 +259,7 @@ body {
       justify-content: center; }
     .section-hero_nav-btn--2 {
       position: absolute;
-      top: 100%;
+      top: 90%;
       left: 50%;
       display: flex;
       align-items: center;
@@ -245,6 +371,9 @@ body {
   .reservation_content {
     max-width: 65%;
     margin: 0 auto; }
+    @media only screen and (max-width: 89.38em) {
+      .reservation_content {
+        max-width: 80%; } }
   .reservation_title {
     color: #fff;
     font-weight: lighter;
@@ -456,8 +585,11 @@ body {
   text-align: center; }
 
 .footer {
-  max-width: 60%;
+  max-width: 70%;
   margin: 0 auto; }
+  @media only screen and (max-width: 89.38em) {
+    .footer {
+      max-width: 70%; } }
   .footer_header {
     color: #d94d39;
     font-weight: lighter;
@@ -479,6 +611,9 @@ body {
     align-items: center;
     margin-bottom: 1rem;
     justify-content: center; }
+    @media only screen and (max-width: 89.38em) {
+      .footer_info {
+        font-size: 1.2rem; } }
     .footer_info-text {
       color: #888; }
       .footer_info-text--number:hover {
@@ -532,6 +667,9 @@ body {
   font-size: 1.2rem;
   margin-bottom: 3rem;
   text-align: center; }
+  @media only screen and (max-width: 75em) {
+    .copyright {
+      font-size: 1rem; } }
 
 .red-line {
   text-align: center;

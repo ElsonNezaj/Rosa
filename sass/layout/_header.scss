@@ -1,5 +1,7 @@
 .header {
 
+
+
     &_content {
         display: flex;
         justify-content: space-between;
@@ -11,11 +13,32 @@
         height: 75%;
     }
 
+    &_items {
+        display: flex;
+        padding-right: 5rem;
+    }
+
     &_nav {
         display: flex;
         gap: 1rem;
-        padding-right: 5rem;
         align-items: center;
+
+
+        @media only screen and (max-width: $bp-big) {
+            background-color: $color-primary;
+            position: absolute;
+            height: 100vh;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 30%;
+            position: fixed;
+            gap: 0rem;
+        }
+
 
         &-link:link,
         &-link:visited {
@@ -27,6 +50,12 @@
             transition: all .2s;
             padding: 1rem;
             border: 1px solid transparent;
+
+            @media only screen and (max-width : $bp-big) {
+                border: 1px solid white;
+                width: 100%;
+                text-align: center;
+            }
         }
 
         &-link:hover,
@@ -34,6 +63,10 @@
             color: $color-primary;
             transform: translateY(-1px);
             border: 1px solid $color-white;
+
+            @media only screen and (max-width : $bp-big) {
+                transform: translateY(0);
+            }
         }
 
         &-line {
@@ -48,6 +81,30 @@
         display: inline-block;
         transition: all .2s;
 
+        @media only screen and (max-width : $bp-big) {
+            margin-bottom: 1rem;
+            width: 100%;
+            text-align: center;
+        }
+
+        &-b {
+            color: $color-white;
+            font-weight: 500;
+            font-size: 1.6rem;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: all .2s;
+            padding: 1rem;
+            text-align: center;
+
+
+            @media only screen and (max-width : $bp-big) {
+                border: 1px solid white;
+                width: 100%;
+                text-align: center;
+            }
+        }
+
         &-content {
             display: none;
             background-color: $color-white;
@@ -55,6 +112,13 @@
             position: absolute;
             width: max-content;
             transition: all .2s;
+
+            @media only screen and (max-width: $bp-big) {
+                position: relative;
+                width: 100%;
+                text-align: center;
+                border-bottom: 1px solid #777;
+            }
 
             a:link,
             a:visited {
@@ -66,12 +130,20 @@
                 text-transform: uppercase;
                 transition: all .2s;
                 display: block;
+
+                @media only screen and (max-width: $bp-big) {
+                    border-bottom: 1px solid #999;
+                }
             }
 
             a:hover,
             a:active {
                 color: $color-primary;
                 background-color: #e9e9e9;
+
+                @media only screen and (max-width: $bp-big) {
+                    border-bottom: 1px solid #777;
+                }
             }
 
         }
@@ -80,5 +152,80 @@
             display: block;
             z-index: 1;
         }
+    }
+}
+
+.white:link,
+.white:visited {
+    color: $color-white;
+    font-weight: 500;
+    font-size: 1.6rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all .2s;
+    padding: 1rem;
+    border: 1px solid transparent;
+}
+
+.white:hover,
+.white:active {
+    color: $color-primary;
+    transform: translateY(-1px);
+    border: 1px solid $color-white;
+}
+
+.menu_link:link,
+.menu_link:visited {
+    display: none;
+    color: $color-white;
+    font-weight: 500;
+    font-size: 1.6rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all .2s;
+    padding: 1rem;
+    border: 1px solid transparent;
+
+    &:hover,
+    &:active {
+        color: $color-primary;
+        transform: translateY(-1px);
+        border: 1px solid $color-white;
+    }
+
+    @media only screen and (max-width: $bp-big) {
+        display: block;
+    }
+}
+
+.menu_link:focus+.menu_close,
+.menu_link:focus~.menu {
+    display: block;
+}
+
+.menu {
+
+    @media only screen and (max-width: $bp-big) {
+        display: none;
+    }
+}
+
+.menu a {}
+
+
+.menu_close {
+    display: none;
+
+    @media only screen and (max-width: $bp-big) {
+        color: $color-white;
+        position: absolute;
+        top: 10%;
+        left: 23%;
+        font-size: 5rem;
+        z-index: 1001;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        display: none;
     }
 }

@@ -7,6 +7,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="css/style.css">
+
+    <script type="text/javascript">
+        function ShowDiv() {
+            document.getElementById("close").style.display = "block";
+            document.getElementById("menu").style.display = "block";
+        }
+
+        function closediv() {
+            document.getElementById("close").style.display = "none";
+            document.getElementById("menu").style.display = "none";
+        }
+
+        function closeit() {
+            document.getElementById("close").style.display = "none";
+            document.getElementById("menu").style.display = "none";
+            document.getElementById("drop").style.display = "none";
+        }
+
+        function closeof() {
+            document.getElementById("drop").style.display = "block";
+        }
+    </script>
+
     <title>Rosa Hotel Garni</title>
 </head>
 
@@ -20,24 +43,37 @@
                     <img src="img/white logo rosa.png" alt="Rosa Logo" class="header_logo">
                 </div>
 
-                <nav class="header_nav">
-                    <div class="header_dropdown">
-                        <a class="header_nav-link header_dropdown-b" href="#">Meet us</a>
-                        <div class="header_dropdown-content">
-                            <a href="#">A family business</a>
-                            <a href="#">The good old way</a>
-                            <a href="#">How to reach</a>
-                            <a href="#">Contacts</a>
-                        </div>
-                    </div>
+                <div class="header_items">
 
-                    <a class="header_nav-link" href="#">Sleep</a>
-                    <a class="header_nav-link" href="#">Eat</a>
-                    <a class="header_nav-link" href="#">See</a>
-                    <a class="header_nav-link" href="#">To Do</a>
+                    <a class="menu_link " href="#" onclick="ShowDiv()">Menu</a>
+                    <button class="menu_close" id="close" onclick="closediv()">
+                        <ion-icon name="close-outline"></ion-icon>
+                    </button>
+                    <div class="menu" id="menu">
+
+                        <nav class="header_nav">
+
+
+
+                            <a class=" header_dropdown-b" href="#" onclick="closeof()">Meet us</a>
+                            <div class="header_dropdown-content" id="drop">
+                                <a href="#" onclick="closeit()">A family business</a>
+                                <a href="#" onclick="closeit()">The good old way</a>
+                                <a href="#" onclick="closeit()">How to reach</a>
+                                <a href="#" onclick="closeit()">Contacts</a>
+                            </div>
+
+
+                            <a class="header_nav-link" href="#" onclick="closeit()">Sleep</a>
+                            <a class="header_nav-link" href="#" onclick="closeit()">Eat</a>
+                            <a class="header_nav-link" href="#" onclick="closeit()">See</a>
+                            <a class="header_nav-link" href="#" onclick="closeit()">To Do</a>
+
+                    </div>
                     <div class="header_nav-line">&Backslash;</div>
-                    <a class=" header_nav-link" href="#reser">Ask For Reservation</a>
-                </nav>
+                    </nav>
+                    <a class="header_nav-link--reser white" href="#reser">Ask For Reservation</a>
+                </div>
             </div>
         </header>
 
@@ -286,7 +322,7 @@
     </section>
 
     <!-- Call to Action Section-->
-    <section class="section-cta">
+    <section class="section-cta" id="cta">
         <div class="cta">
             <h1 class="cta_heading">STAY IN TOUCH</h1>
             <h3 class="cta_text">RECIEVE THE LATEST NEWS AND PROMOTION, STRAIGHT TO YOUR MAILBOX</h3>

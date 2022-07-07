@@ -18,6 +18,10 @@ html {
     font-size: 62.5%;
     box-sizing: inherit;
     scroll-behavior: smooth;
+
+    @media only screen and (max-width: $bp-big) {
+        font-size: 50%;
+    }
 }
 
 body {

@@ -5,8 +5,12 @@
 }
 
 .footer {
-    max-width: 60%;
+    max-width: 70%;
     margin: 0 auto;
+
+    @media only screen and (max-width: $bp-large) {
+        max-width: 70%;
+    }
 
     &_header {
         color: $color-primary;
@@ -37,6 +41,10 @@
         align-items: center;
         margin-bottom: 1rem;
         justify-content: center;
+
+        @media only screen and (max-width: $bp-large) {
+            font-size: 1.2rem;
+        }
 
         &-text {
             color: #888;
@@ -122,6 +130,11 @@
     font-size: 1.2rem;
     margin-bottom: 3rem;
     text-align: center;
+
+
+    @media only screen and (max-width: $bp-big) {
+        font-size: 1rem;
+    }
 }
 
 .red-line {
