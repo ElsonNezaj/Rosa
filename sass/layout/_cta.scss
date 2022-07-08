@@ -9,6 +9,10 @@
     max-width: 57%;
     margin: 0 auto;
 
+    @media only screen and (max-width: $bp-small) {
+        max-width: 80%;
+    }
+
     &_heading {
         color: $color-white;
         text-align: center;
@@ -38,6 +42,10 @@
         padding: 1rem 3rem;
         transition: all .2s;
 
+        @media only screen and (max-width: $bp-small) {
+            width: 60%;
+        }
+
         &:focus:invalid {
             color: $color-primary;
             cursor: black;
@@ -56,6 +64,10 @@
         background-color: transparent;
         color: $color-white;
         transition: all .1s;
+
+        @media only screen and (max-width: $bp-small) {
+            width: 40%;
+        }
 
         &:hover {
             background-color: $color-white;

@@ -12,6 +12,8 @@
         function ShowDiv() {
             document.getElementById("close").style.display = "block";
             document.getElementById("menu").style.display = "block";
+            document.getElementById("reser").style.display = "none";
+            document.getElementById("resercls").style.display = "none";
         }
 
         function closediv() {
@@ -22,11 +24,16 @@
         function closeit() {
             document.getElementById("close").style.display = "none";
             document.getElementById("menu").style.display = "none";
-            document.getElementById("drop").style.display = "none";
         }
 
-        function closeof() {
-            document.getElementById("drop").style.display = "block";
+        function resershow() {
+            document.getElementById("reser").style.display = "block";
+            document.getElementById("resercls").style.display = "block";
+        }
+
+        function reserclose() {
+            document.getElementById("reser").style.display = "none";
+            document.getElementById("resercls").style.display = "none";
         }
     </script>
 
@@ -72,7 +79,7 @@
                     </div>
                     <div class="header_nav-line">&Backslash;</div>
                     </nav>
-                    <a class="header_nav-link--reser white" href="#reser">Ask For Reservation</a>
+                    <a class="header_nav-link--reser white" href="#reser" onclick="resershow()">Ask For Reservation</a>
                 </div>
             </div>
         </header>
@@ -139,6 +146,7 @@
 
     <!--Reservation-->
     <section class="reservation" id="reser">
+        <ion-icon name="close-outline" class="reservation_close" id="resercls" onclick="reserclose()"></ion-icon>
         <div class="reservation_content">
             <h1 class="reservation_title">ASK FOR RESERVATION</h1>
             <p class="reservation_text">And feel free to drop us a line about everything you need to know</p>
@@ -146,15 +154,15 @@
             <form class="reservation_form">
                 <div class="reservation_name">
                     <label class="reservation_label" for="name">Name :</label>
-                    <input type="text" id="name" placeholder="Your Name" required>
+                    <input type="text" id="name" placeholder="Your Name">
                 </div>
 
                 <div class="reservation_email">
                     <label class="reservation_label" for="email">Email :</label>
-                    <input type="email" id="email" placeholder="Your Email" required>
+                    <input type="email" id="email" placeholder="Your Email">
                 </div>
 
-                <div class="reservation_date">
+                <div class="reservation_date reservation_date--1">
                     <label class="reservation_label" for="from">From :</label>
                     <input id="from" class="reservation_date-input" placeholder="mm/dd/yyyy">
 
@@ -210,7 +218,7 @@
                     </div>
                 </div>
 
-                <div class="reservation_date">
+                <div class="reservation_date reservation_date--2">
                     <label class="reservation_label" for="to">To :</label>
                     <input id="to" class="reservation_date-input" placeholder="mm/dd/yyyy">
 
@@ -266,7 +274,7 @@
                     </div>
                 </div>
 
-                <div class="reservation_select">
+                <div class="reservation_select reservation_select--1">
                     <label class="reservation_label">Adults:&nbsp; 2</label>
                     <button class="reservation_select-btn">
                         <ion-icon class="selecticon" name="chevron-down-outline"></ion-icon>
@@ -289,7 +297,7 @@
                 </div>
 
 
-                <div class="reservation_select">
+                <div class="reservation_select reservation_select--2">
                     <label class="reservation_label">Children:&nbsp; 2</label>
                     <button class="reservation_select-btn">
                         <ion-icon class="selecticon" name="chevron-down-outline"></ion-icon>

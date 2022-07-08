@@ -6,6 +6,10 @@
         width: 75%;
         margin: 0 auto;
         text-align: center;
+
+        @media only screen and (max-width: $bp-small) {
+            width: 95%;
+        }
     }
 
     &_logo {
@@ -29,6 +33,10 @@
 
         span {
             color: rgb(3, 65, 142);
+        }
+
+        @media only screen and (max-width: $bp-mob) {
+            padding: 0 0;
         }
     }
 

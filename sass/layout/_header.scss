@@ -11,18 +11,26 @@
     &_logo {
         width: 75%;
         height: 75%;
+
+        @media only screen and (max-width: $bp-mob) {
+            width: 50%;
+            height: 50%;
+        }
     }
 
     &_items {
         display: flex;
         padding-right: 5rem;
+
+        @media only screen and (max-width: $bp-mobsm) {
+            padding-right: 1rem;
+        }
     }
 
     &_nav {
         display: flex;
         gap: 1rem;
         align-items: center;
-
 
         @media only screen and (max-width: $bp-big) {
             background-color: $color-primary;
@@ -37,6 +45,10 @@
             width: 30%;
             position: fixed;
             gap: 0rem;
+        }
+
+        @media only screen and (max-width: $bp-mobsm) {
+            gap: 0;
         }
 
 
@@ -66,6 +78,7 @@
 
             @media only screen and (max-width : $bp-big) {
                 transform: translateY(0);
+                background-color: #fff;
             }
         }
 
@@ -103,6 +116,16 @@
                 width: 100%;
                 text-align: center;
             }
+
+            &:active,
+            &:hover {
+                @media only screen and (max-width: $bp-big) {
+                    border-bottom: 1px solid #777;
+                    transform: translateY(0);
+                    background-color: #fff;
+                    color: $color-primary;
+                }
+            }
         }
 
         &-content {
@@ -112,12 +135,14 @@
             position: absolute;
             width: max-content;
             transition: all .2s;
+            top: 10%;
 
             @media only screen and (max-width: $bp-big) {
                 position: relative;
                 width: 100%;
                 text-align: center;
                 border-bottom: 1px solid #777;
+                top: 0;
             }
 
             a:link,
@@ -218,7 +243,7 @@
 
     @media only screen and (max-width: $bp-big) {
         color: $color-white;
-        position: absolute;
+        position: fixed;
         top: 10%;
         left: 23%;
         font-size: 5rem;
@@ -228,4 +253,9 @@
         cursor: pointer;
         display: none;
     }
+}
+
+.header_dropdown-b:focus~.header_dropdown-content {
+    display: block;
+    z-index: 1;
 }

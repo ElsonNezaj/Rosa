@@ -6,9 +6,13 @@
     text-align: center;
     position: relative;
 
+    @media only screen and (max-width: $bp-mob) {
+        padding-top: 0;
+    }
+
     &_nav {
 
-        @media only screen and (max-width: $bp-small) {
+        @media only screen and (max-width: $bp-big) {
             display: none;
         }
 

@@ -2,6 +2,16 @@
     background-color: white;
     padding: 10rem;
     text-align: center;
+
+
+    @media only screen and (max-width: $bp-small) {
+        padding: 3rem;
+    }
+
+    @media only screen and (max-width: $bp-mobsm) {
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
 
 .footer {
@@ -10,6 +20,10 @@
 
     @media only screen and (max-width: $bp-large) {
         max-width: 70%;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        max-width: 90%;
     }
 
     &_header {
