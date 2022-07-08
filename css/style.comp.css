@@ -3,12 +3,18 @@
   font-weight: lighter;
   letter-spacing: .5rem;
   font-size: 3.6rem; }
+  @media only screen and (max-width: 17.5em) {
+    .heading-1 {
+      font-size: 2.4rem; } }
 
 .heading-2 {
   color: #fff;
   font-weight: lighter;
   letter-spacing: .5rem;
   font-size: 3rem; }
+  @media only screen and (max-width: 17.5em) {
+    .heading-2 {
+      font-size: 2rem; } }
 
 @font-face {
   font-family: "CustomFont";
@@ -64,6 +70,13 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center; }
+  @media only screen and (max-width: 32.5em) {
+    .header_content {
+      justify-content: center; } }
+
+@media only screen and (max-width: 32.5em) {
+  .header_img {
+    width: 50%; } }
 
 .header_logo {
   width: 75%;
@@ -72,13 +85,19 @@ body {
     .header_logo {
       width: 50%;
       height: 50%; } }
+  @media only screen and (max-width: 32.5em) {
+    .header_logo {
+      width: 80%;
+      height: 80%; } }
 
 .header_items {
   display: flex;
   padding-right: 5rem; }
   @media only screen and (max-width: 32.5em) {
     .header_items {
-      padding-right: 1rem; } }
+      padding-right: 0;
+      width: 80%;
+      justify-content: end; } }
 
 .header_nav {
   display: flex;
@@ -95,9 +114,12 @@ body {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      width: 30%;
+      width: 50%;
       position: fixed;
       gap: 0rem; } }
+  @media only screen and (max-width: 17.5em) {
+    .header_nav {
+      width: 60%; } }
   @media only screen and (max-width: 32.5em) {
     .header_nav {
       gap: 0; } }
@@ -252,13 +274,16 @@ body {
       color: #fff;
       position: fixed;
       top: 10%;
-      left: 23%;
+      left: 40%;
       font-size: 5rem;
       z-index: 1001;
       background-color: transparent;
       border: none;
       cursor: pointer;
       display: none; } }
+  @media only screen and (max-width: 17.5em) {
+    .menu_close {
+      left: 45%; } }
 
 .header_dropdown-b:focus ~ .header_dropdown-content {
   display: block;
@@ -430,6 +455,9 @@ body {
       height: 100vh;
       position: fixed;
       display: none; } }
+  @media only screen and (max-width: 17.5em) {
+    .reservation {
+      width: 70%; } }
   .reservation_content {
     max-width: 65%;
     margin: 0 auto; }
@@ -447,12 +475,18 @@ body {
     letter-spacing: .5rem;
     margin-bottom: 1.5rem;
     text-align: center; }
+    @media only screen and (max-width: 32.5em) {
+      .reservation_title {
+        font-size: 2rem; } }
   .reservation_text {
     color: #fff;
     font-weight: lighter;
     font-size: 2rem;
     margin-bottom: 2.5rem;
     text-align: center; }
+    @media only screen and (max-width: 32.5em) {
+      .reservation_text {
+        font-size: 1.5rem; } }
   .reservation_form {
     margin-top: 3rem;
     display: grid;
@@ -650,6 +684,9 @@ body {
   @media only screen and (max-width: 58em) {
     .cta {
       max-width: 80%; } }
+  @media only screen and (max-width: 32.5em) {
+    .cta {
+      max-width: 90%; } }
   .cta_heading {
     color: #fff;
     text-align: center;
@@ -675,6 +712,9 @@ body {
     @media only screen and (max-width: 58em) {
       .cta_email {
         width: 60%; } }
+    @media only screen and (max-width: 32.5em) {
+      .cta_email {
+        width: 60%; } }
     .cta_email:focus:invalid {
       color: #d94d39;
       cursor: black; }
@@ -691,6 +731,9 @@ body {
     @media only screen and (max-width: 58em) {
       .cta_button {
         width: 40%; } }
+    @media only screen and (max-width: 32.5em) {
+      .cta_button {
+        width: 30%; } }
     .cta_button:hover {
       background-color: #fff;
       color: black;
