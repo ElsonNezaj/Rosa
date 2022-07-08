@@ -1,11 +1,19 @@
 .header {
 
-
-
     &_content {
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        @media only screen and (max-width: $bp-mobsm) {
+            justify-content: center;
+        }
+    }
+
+    &_img {
+        @media only screen and (max-width: $bp-mobsm) {
+            width: 50%;
+        }
     }
 
     &_logo {
@@ -16,6 +24,11 @@
             width: 50%;
             height: 50%;
         }
+
+        @media only screen and (max-width: $bp-mobsm) {
+            width: 80%;
+            height: 80%;
+        }
     }
 
     &_items {
@@ -23,7 +36,9 @@
         padding-right: 5rem;
 
         @media only screen and (max-width: $bp-mobsm) {
-            padding-right: 1rem;
+            padding-right: 0;
+            width: 80%;
+            justify-content: end;
         }
     }
 
@@ -42,15 +57,18 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            width: 30%;
+            width: 50%;
             position: fixed;
             gap: 0rem;
+        }
+
+        @media only screen and (max-width: $bp-little) {
+            width: 60%;
         }
 
         @media only screen and (max-width: $bp-mobsm) {
             gap: 0;
         }
-
 
         &-link:link,
         &-link:visited {
@@ -245,13 +263,17 @@
         color: $color-white;
         position: fixed;
         top: 10%;
-        left: 23%;
+        left: 40%;
         font-size: 5rem;
         z-index: 1001;
         background-color: transparent;
         border: none;
         cursor: pointer;
         display: none;
+    }
+
+    @media only screen and (max-width: $bp-little) {
+        left: 45%;
     }
 }
 

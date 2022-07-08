@@ -13,6 +13,11 @@
         max-width: 80%;
     }
 
+
+    @media only screen and (max-width: $bp-mobsm) {
+        max-width: 90%;
+    }
+
     &_heading {
         color: $color-white;
         text-align: center;
@@ -46,6 +51,11 @@
             width: 60%;
         }
 
+        @media only screen and (max-width: $bp-mobsm) {
+            width: 60%;
+        }
+
+
         &:focus:invalid {
             color: $color-primary;
             cursor: black;
@@ -67,6 +77,10 @@
 
         @media only screen and (max-width: $bp-small) {
             width: 40%;
+        }
+
+        @media only screen and (max-width: $bp-mobsm) {
+            width: 30%;
         }
 
         &:hover {
